@@ -73,6 +73,7 @@ footer {
 	
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -100,6 +101,26 @@ footer {
 	height: 24px;
 }
 
+.btn-download img{
+	height: 1rem;
+}
+
+.user-pic {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+
+	overflow: hidden;
+
+	background-color: var(--gray);
+}
+
+.user-pic img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
 @media screen and (min-width: 601px) {
 	.sidebar {
 		padding: 20px;
@@ -125,7 +146,8 @@ footer {
 		align-items: flex-start;
 	}
 
-	.side-navbar .btn {
+	.sidebar .btn,
+	.user-profile {
 		display: flex;
 		align-items: center;
 	}
