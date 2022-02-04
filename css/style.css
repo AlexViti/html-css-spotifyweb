@@ -6,4 +6,40 @@
 
 html {
 	font-family: sans-serif;
+	color: white;
+}
+
+/* DEBUG */
+
+.debug aside {
+	background-color: aqua;
+}
+
+.debug main {
+	background-color: darkblue;
+}
+
+.debug footer {
+	background-color: grey;
+}
+
+/* Macro-areas size */
+body {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+aside {
+	width: 50px;
+	height: calc(100vh - 90px);
+}
+
+main {
+	width: calc(100% - 50px);
+	height: calc(100vh - 90px);
+}
+
+footer {
+	width: 100%;
+	height: 90px;
 }
