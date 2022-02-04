@@ -11,10 +11,6 @@ html {
 
 /* DEBUG */
 
-.debug aside {
-	background-color: aqua;
-}
-
 .debug main {
 	background-color: darkblue;
 }
@@ -43,7 +39,7 @@ main {
 	aside {
 		width: 230px;
 	}
-
+	
 	main {
 		width: calc(100% - 230px);
 	}
@@ -52,4 +48,44 @@ main {
 footer {
 	width: 100%;
 	height: 90px;
+}
+
+/* Aside-bar */
+
+aside {
+	background-color: black;
+	
+	padding-top: 5px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wide-bar {
+	display: none;
+}
+
+.logo-small {
+	height: 28px;
+}
+
+@media screen and (min-width: 601px) {
+	aside {
+		padding: 20px;
+		
+		align-items: flex-start;
+	}
+
+	.wide-bar {
+		display: initial;
+	}
+
+	.logo-small {
+		display: none;
+	}
+
+	.logo-name {
+		height: 40px;
+	}
 }
