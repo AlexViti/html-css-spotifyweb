@@ -19,8 +19,13 @@ ul {
 	list-style: none;
 }
 
+.btn {
+	color: var(--gray)
+}
+
 .btn:hover {
 	cursor: pointer;
+	color: white;
 }
 
 /* DEBUG */
@@ -152,7 +157,7 @@ footer {
 		align-items: center;
 	}
 
-	.selected { /* Green border hack */
+	.selected {
 		margin-left: -20px;
 		padding-left: 18px;
 		border-left: 2px solid var(--green) ;
