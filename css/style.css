@@ -78,7 +78,7 @@ footer {
 	
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 }
 
@@ -104,6 +104,14 @@ footer {
 
 .icon {
 	height: 24px;
+}
+
+.sidebar-center {
+	overflow-y: auto;
+}
+
+.sidebar-bottom {
+	margin-top: auto;
 }
 
 .btn-download img{
