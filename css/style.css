@@ -18,8 +18,10 @@
 	--banner-height: var(--music-player-height);
 
 	/* Common margins */
+	--xs-margin: 5px;
 	--s-margin: 8px;
-	--m-margin: 20px;
+	--m-margin: 12px;
+	--l-margin: 20px;
 
 	/* Selected button border */
 	--selected-border: 2px solid var(--green);
@@ -40,6 +42,7 @@
 html { /*Font */
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
+	font-weight: 500;
 	color: white;
 }
 
@@ -74,6 +77,7 @@ ul {
 	background-color: var(--bar-filled);
 
 	height: 100%;
+	border-radius: 2px;
 
 	position: relative;
 }
@@ -106,7 +110,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 
-	background-color: var(--main-background);
 	overflow: hidden;
 }
 
@@ -202,14 +205,14 @@ footer {
 
 @media screen and (min-width: 601px) {
 	.sidebar {
-		padding: var(--m-margin) 0 5px;
+		padding: var(--l-margin) 0 5px;
 
 		align-items: stretch;
 	}
 
 	.sidebar .btn, .sidebar .logo,
 	.sidebar h3 {
-		padding-left: var(--m-margin);
+		padding-left: var(--l-margin);
 	}
 
 	.wide-bar {
@@ -275,7 +278,7 @@ footer {
 	.btn.user-profile {
 		padding-top: 13px;
 		padding-left: 0;
-		margin: var(--s-margin) var(--m-margin) 0;
+		margin: var(--s-margin) var(--l-margin) 0;
 		border-top: 1px solid var(--gray);
 	}
 
@@ -309,7 +312,7 @@ footer {
 	font-weight: 500;
 	color: white;
 
-	margin-right: var(--m-margin);
+	margin-right: var(--l-margin);
 	padding: 1em 3em;
 	border: 1px solid white;
 	border-radius: 3rem;
@@ -324,7 +327,7 @@ footer {
 /* Main */
 
 .main-content {
-
+	background-color: var(--main-background);
 
 	padding-top: var(--banner-height);
 }
@@ -372,8 +375,10 @@ footer {
 	background-color: var(--music-player-background);
 
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
+
 
 .player-left {
 	display: flex;
@@ -382,6 +387,19 @@ footer {
 
 .track {
 	display: flex;
+	align-items: center;
+
+	color: var(--gray);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.track h4 {
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+
+	line-height: 1em;
 }
 
 .track img {
@@ -391,12 +409,50 @@ footer {
 }
 
 .icons {
+	font-size: 18px;
 	display: flex;
 	flex-direction: column;
 }
 
+.player-center .btn, .player-right .btn {
+	color: white;
+}
+
+.player-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.function {
+	font-size: 18px;
+
+	width: 190px;
+	margin-bottom: var(--m-margin);
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.function .fa-play-circle {
+	font-size: 30px;
+}
+
+.progress {
+	min-width: 100%;
+
+	display: flex;
+	align-items: center;
+
+	font-size: 12px;
+	font-weight: 600;
+}
+
 .progress-bar {
-	width: 100px;
+	flex: 1 0 0;
+
+	margin: 0 var(--s-margin);
 }
 
 .current-progress {
@@ -405,12 +461,18 @@ footer {
 
 .player-right {
 	display: flex;
+	align-items: center;
 }
 
 .volume {
 	display: flex;
+	align-items: center;
+}
+
+.volume-bar {
+	width: 85px;
 }
 
 .volume-level {
-	width: 100px;
+	width: 20%;
 }
