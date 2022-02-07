@@ -4,72 +4,70 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<!-- Style link -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Montserrat font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<!-- Favicon link -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 	<title>Spotify Web</title>
 </head>
 
 <!-- A sidebar header, a main and footer with a mock music-player -->
-<body class="debug">
+<body>
 
 	<!-- Sidebar splitted in 2: top and bottom  -->
 	<header class="sidebar">
 
-		<!-- Top part of sidebar with logo, navbar ans list of playlist -->
-		<div class="sidebar-top">
+		<!-- Logos: one w/o the name displayed when the bar is reduced, one with the name displayed when the bar is full-size -->
+		<div class="logo">
 
-			<!-- Logos: one w/o the name displayed when the bar is reduced, one with the name displayed when the bar is full-size -->
-			<div class="logo">
+			<img src="img/logo-small.svg" alt="Logo Spotify" class="logo-small">
+			<img src="img/logo.svg" alt="Logo Spotify" class="logo-name wide-bar">
 
-				<img src="img/logo-small.svg" alt="Logo Spotify" class="logo-small">
-				<img src="img/logo.svg" alt="Logo Spotify" class="logo-name wide-bar">
-
-			</div>
-
-			<!-- Navbar with 3 buttons -->
-			<nav class="side-navbar">
-
-				<ul>
-
-					<li class="btn selected">
-
-						<img src="img/home.svg" alt="Icona home" class="icon">
-						<div class="wide-bar">Home</div>
-
-					</li>
-
-					<li class="btn">
-
-						<img src="img/search.svg" alt="Icona cerca" class="icon">
-						<div class="wide-bar">Cerca</div>
-
-					</li>
-
-					<li class="btn">
-
-						<img src="img/libreria.svg" alt="Icona libreria" class="icon">
-						<div class="wide-bar">La tua libreria</div>
-
-					</li>
-
-				</ul>
-
-				<!-- Playlist section, with a heading, a button and a list -->
-				<section class="playlist wide-bar">
-
-					<h3>PLAYLIST</h3>
-
-					<div class="btn add-playlist"><div class="add">+</div> Crea Playlist</div>	
-				</section>
-				
-			</nav>
-			
 		</div>
+
+		<!-- Navbar with 3 buttons -->
+		<nav class="side-navbar">
+
+			<ul>
+
+				<li class="btn selected">
+
+					<img src="img/home.svg" alt="Icona home" class="icon">
+					<div class="wide-bar">Home</div>
+
+				</li>
+
+				<li class="btn">
+
+					<img src="img/search.svg" alt="Icona cerca" class="icon">
+					<div class="wide-bar">Cerca</div>
+
+				</li>
+
+				<li class="btn">
+
+					<img src="img/libreria.svg" alt="Icona libreria" class="icon">
+					<div class="wide-bar">La tua libreria</div>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Playlist section with title, an add button and a list -->
+		<h3 class="wide-bar">PLAYLIST</h3>
+		<div class="btn wide-bar add-playlist"><div class="add">+</div> Crea Playlist</div>	
 		
-		<ul class="sidebar-center wide-bar">
+		<ul class="playlists wide-bar">
 			<li class="btn">Nome Playlist</li>
 			<li class="btn">Nome Playlist</li>
 			<li class="btn">Nome Playlist</li>
@@ -87,7 +85,7 @@
 				<div class="wide-bar">Installa app</div>
 			</div>
 
-			<div class="user-profile">
+			<div class="btn user-profile">
 				<div class="user-pic">
 					<img src="img/profile.svg" alt="Foto profilo">
 				</div>

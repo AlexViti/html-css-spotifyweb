@@ -1,17 +1,19 @@
-:root {
+/* Common */
+
+:root { /* Variables */
 	--green: #adff2f;
 	--gray: #a3a3a3;
 	--darkgrey: #282828;
 }
 
-* {
+* { /* Reset */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-html {
-	font-family: sans-serif;
+html { /*Font */
+	font-family: 'Montserrat', sans-serif;
 	color: white;
 }
 
@@ -26,16 +28,6 @@ ul {
 .btn:hover {
 	cursor: pointer;
 	color: white;
-}
-
-/* DEBUG */
-
-.debug main {
-	background-color: darkblue;
-}
-
-.debug footer {
-	background-color: grey;
 }
 
 /* Macro-areas size */
@@ -74,13 +66,13 @@ footer {
 .sidebar {
 	background-color: black;
 	
-	padding-top: 5px;
+	padding: 5px 0 10px;
 	
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: center;
 }
+
 
 .wide-bar {
 	display: none;
@@ -92,13 +84,9 @@ footer {
 
 .side-navbar {
 	margin-top: 8px;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
-.side-navbar li {
+.sidebar li {
 	line-height: 35px;
 }
 
@@ -106,16 +94,18 @@ footer {
 	height: 24px;
 }
 
-.sidebar-center {
-	overflow-y: auto;
-}
-
 .sidebar-bottom {
 	margin-top: auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .btn-download img{
-	height: 1rem;
+	height: 16px;
+	width: 16px;
+	object-position: center;
 }
 
 .user-pic {
@@ -136,9 +126,12 @@ footer {
 
 @media screen and (min-width: 601px) {
 	.sidebar {
-		padding: 20px;
-		
-		align-items: flex-start;
+		align-items: stretch;
+	}
+
+	.sidebar .btn, .sidebar .logo,
+	.sidebar h3 {
+		padding-left: 20px;
 	}
 
 	.wide-bar {
@@ -155,8 +148,6 @@ footer {
 
 	.side-navbar {
 		margin-top: 24px;
-
-		align-items: flex-start;
 	}
 
 	.sidebar .btn,
@@ -165,10 +156,10 @@ footer {
 		align-items: center;
 	}
 
-	.selected {
-		margin-left: -20px;
+	.btn.selected {
 		padding-left: 18px;
-		border-left: 2px solid var(--green) ;
+		border-left: 2px solid var(--green);
+		color: white;
 	}
 
 	.add {
@@ -180,5 +171,14 @@ footer {
 		color: black;
 		
 		background-color: var(--gray);
+	}
+
+	.playlists {
+		overflow-y: auto;
+	}
+
+	.user-name {
+		color: white;
+		font-weight: 600;
 	}
 }
