@@ -63,7 +63,7 @@ ul {
 	background-color: var(--bar-background);
 	
 	height: 4px;
-	border-radius: 1px;
+	border-radius: 2px;
 }
 
 .bar:hover {
@@ -105,6 +105,9 @@ ul {
 body {
 	display: flex;
 	flex-wrap: wrap;
+
+	background-color: var(--main-background);
+	overflow: hidden;
 }
 
 header {
@@ -115,6 +118,7 @@ header {
 }
 
 main {
+	height: calc(100vh - var(--music-player-height));
 	flex: 1 0 0;
 
 	overflow-y: auto;
@@ -123,6 +127,11 @@ main {
 footer {
 	width: 100%;
 	height: var(--music-player-height);
+
+	
+	position: absolute;
+	bottom: 0;
+	z-index: 20;
 }
 
 /* Lateral header */
@@ -315,7 +324,7 @@ footer {
 /* Main */
 
 .main-content {
-	background-color: var(--main-background);
+
 
 	padding-top: var(--banner-height);
 }
@@ -362,10 +371,6 @@ footer {
 .music-player {
 	background-color: var(--music-player-background);
 
-	position: relative;
-	bottom: 0;
-	z-index: 20;
-
 	display: flex;
 	align-items: center;
 }
@@ -398,10 +403,14 @@ footer {
 	width: 50px;
 }
 
-/* Vertical overflow fix */
+.player-right {
+	display: flex;
+}
 
-@media screen and (max-height: 180px) {
-	.main-content {
-		display: none;
-	}
+.volume {
+	display: flex;
+}
+
+.volume-level {
+	width: 100px;
 }
