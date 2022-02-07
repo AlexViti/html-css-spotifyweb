@@ -9,6 +9,8 @@
 	/* Background colors */
 	--main-background: #141922;
 	--music-player-background: #282828;
+	--bar-background: #5a5a5a;
+	--bar-filled: #c1c1c1;
 
 	/* Macro-areas sizes */
 	--side-bar-width: 50px;
@@ -53,6 +55,50 @@ ul {
 	cursor: pointer;
 
 	color: white;
+}
+
+/* Bar rules */
+
+.bar {
+	background-color: var(--bar-background);
+	
+	height: 4px;
+	border-radius: 1px;
+}
+
+.bar:hover {
+	cursor: pointer;
+}
+
+.bar-filled {
+	background-color: var(--bar-filled);
+
+	height: 100%;
+
+	position: relative;
+}
+
+.bar:hover .bar-filled {
+	background-color: var(--green);
+}
+
+.bar-circle {
+	display: none;
+
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+
+	background-color: white;
+
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(50%, -50%);
+}
+
+.bar-filled:hover .bar-circle {
+	display: initial;
 }
 
 /* Macro-areas size */
@@ -323,6 +369,12 @@ footer {
 	display: flex;
 	align-items: center;
 }
+
+.player-left {
+	display: flex;
+	align-items: center;
+}
+
 .track {
 	display: flex;
 }
@@ -336,6 +388,14 @@ footer {
 .icons {
 	display: flex;
 	flex-direction: column;
+}
+
+.progress-bar {
+	width: 100px;
+}
+
+.current-progress {
+	width: 50px;
 }
 
 /* Vertical overflow fix */

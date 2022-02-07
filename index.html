@@ -127,21 +127,52 @@
 	<!-- Footer with a mock music-player with 3 detatched groups of buttons -->
 	<footer class="music-player">
 
-		<div class="track">
+		<!-- Left side of the player with track info, and 2 buttons -->
+		<div class="player-left">
 
-			<img src="img/sinister.jpeg" alt="Sinister cover">
-
-			<div class="track-info">
-				<h4>Sinister</h4>
-				<div>Brano</div>
-				<div>Nome</div>	
+			<!-- Track info with album cover, album name, song title and artist  -->
+			<div class="track">
+	
+				<img src="img/sinister.jpeg" alt="Sinister cover">
+	
+				<div class="track-info">
+					<h4>Sinister</h4>
+					<div>Brano</div>
+					<div>Nome</div>	
+				</div>
+				
 			</div>
-
+			
+			<!-- Two buttons -->
+			<div class="icons">
+				<i class="btn far fa-heart"></i>
+				<i class="btn far fa-folder"></i>
+			</div>
+			
 		</div>
 
-		<div class="icons">
-			<i class="btn far fa-heart"></i>
-			<i class="btn far fa-folder"></i>
+		<!-- Player center with functions buttons and progress bar -->
+		<div class="player-center">
+
+			<!-- 5 Function buttons -->
+			<div class="function">
+				<i class="btn fas fa-random"></i>
+				<i class="btn fas fa-step-backward"></i>
+				<i class="btn far fa-play-circle"></i>
+				<i class="btn fas fa-step-forward"></i>
+				<i class="btn fas fa-redo-alt"></i>
+			</div>
+
+			<div class="progress">
+				<div class="current-time">0:25</div>
+				<div class="bar progress-bar">
+					<div class="bar-filled current-progress">
+						<div class="bar-circle"></div>
+					</div>
+				</div>
+				<div class="duration-time">4:35</div>
+			</div>
+
 		</div>
 
 	</footer>
