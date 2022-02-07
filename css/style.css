@@ -18,6 +18,9 @@
 	/* Common margins */
 	--s-margin: 8px;
 	--m-margin: 20px;
+
+	/* Selected button border */
+	--selected-border: 2px solid var(--green);
 }
 
 @media screen and (min-width: 541px) {
@@ -183,7 +186,7 @@ footer {
 
 	.sidebar .btn.selected {
 		padding-left: 18px;
-		border-left: 2px solid var(--green);
+		border-left: var(--selected-border);
 		color: white;
 	}
 
@@ -260,6 +263,35 @@ footer {
 
 .main-content {
 	background-color: var(--main-background);
+
+	padding-top: var(--banner-height);
+}
+
+/* Top navbar */
+
+.main-navbar ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	font-size: 14px;
+}
+
+.main-navbar .btn {
+	text-transform: uppercase;
+
+	padding: 5px 12px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-navbar .selected::after {
+	content: '';
+	height: 5px;
+	width: 30px;
+	border-bottom: var(--selected-border);
 }
 
 /* Footer */
