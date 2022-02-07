@@ -13,9 +13,11 @@
 	/* Macro-areas sizes */
 	--side-bar-width: 50px;
 	--music-player-height: 90px;
+	--banner-height: var(--music-player-height);
 
 	/* Common margins */
 	--s-margin: 8px;
+	--m-margin: 20px;
 }
 
 @media screen and (min-width: 541px) {
@@ -141,7 +143,7 @@ footer {
 
 @media screen and (min-width: 541px) {
 	.sidebar {
-		padding: 20px 0 5px;
+		padding: var(--m-margin) 0 5px;
 
 		font-size: 14px;
 
@@ -150,7 +152,7 @@ footer {
 
 	.sidebar .btn, .sidebar .logo,
 	.sidebar h3 {
-		padding-left: 20px;
+		padding-left: var(--m-margin);
 	}
 
 	.wide-bar {
@@ -190,7 +192,7 @@ footer {
 	}
 
 	.add {
-		margin-right: 8px;
+		margin-right: var(--s-margin);
 		width: 37px;
 		line-height: 37px;
 		
@@ -216,7 +218,7 @@ footer {
 	.btn.user-profile {
 		padding-top: 13px;
 		padding-left: 0;
-		margin: var(--s-margin) 20px 0;
+		margin: var(--s-margin) var(--m-margin) 0;
 		border-top: 1px solid var(--gray);
 	}
 
@@ -232,19 +234,24 @@ footer {
 .upgrade-banner {
 	background-color: #00000066;
 
+	height: var(--banner-height);
+
 	position: fixed;
 	left: var(--side-bar-width);
 	right: 0;
 	top: 0;
+	z-index: 10;
 
 	display: flex;
 	flex-direction: row-reverse;
+	align-items: center;
 }
 
 .upgrade-banner .btn {
 	color: white;
 
-	padding: 1em 2em;
+	margin-right: var(--m-margin);
+	padding: 1em 4em;
 	border: 1px solid white;
 	border-radius: 1.5em;
 }
@@ -259,4 +266,16 @@ footer {
 
 .music-player {
 	background-color: var(--music-player-background);
+
+	z-index: 20;
+}
+
+@media screen and (max-height: 115px) {
+	.sidebar {
+		display: none;
+	}
+	
+	footer {
+		height: 100vh;
+	}
 }
