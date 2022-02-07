@@ -73,7 +73,6 @@ footer {
 	align-items: center;
 }
 
-
 .wide-bar {
 	display: none;
 }
@@ -105,7 +104,7 @@ footer {
 .btn-download img{
 	height: 16px;
 	width: 16px;
-	object-position: center;
+	object-position: -1px;
 }
 
 .user-pic {
@@ -118,6 +117,10 @@ footer {
 	background-color: var(--gray);
 }
 
+.user-profile {
+	margin-top: 22px;
+}
+
 .user-pic img {
 	height: 100%;
 	width: 100%;
@@ -126,6 +129,10 @@ footer {
 
 @media screen and (min-width: 601px) {
 	.sidebar {
+		padding: 20px 0 5px;
+
+		font-size: 14px;
+
 		align-items: stretch;
 	}
 
@@ -147,7 +154,11 @@ footer {
 	}
 
 	.side-navbar {
-		margin-top: 24px;
+		margin: 24px 0;
+	}
+
+	.side-navbar .icon {
+		margin-right: 8px;
 	}
 
 	.sidebar .btn,
@@ -156,16 +167,21 @@ footer {
 		align-items: center;
 	}
 
-	.btn.selected {
+	.sidebar .btn.selected {
 		padding-left: 18px;
 		border-left: 2px solid var(--green);
 		color: white;
 	}
 
+	.add-playlist {
+		margin: 12px 0;
+	}
+
 	.add {
+		margin-right: 8px;
 		width: 37px;
-		
 		line-height: 37px;
+		
 		font-size: 30px;
 		text-align: center;
 		color: black;
@@ -177,8 +193,25 @@ footer {
 		overflow-y: auto;
 	}
 
+	.sidebar-bottom {
+		align-items: stretch;
+	}
+
+	.btn-download img {
+		margin-right: 8px;
+	}
+
+	.btn.user-profile {
+		padding-top: 13px;
+		padding-left: 0;
+		margin: 8px 20px 0;
+		border-top: 1px solid var(--gray);
+	}
+
 	.user-name {
 		color: white;
 		font-weight: 600;
+		font-size: 16px;
+		margin-left: 8px;
 	}
 }
