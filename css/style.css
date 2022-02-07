@@ -37,6 +37,7 @@
 
 html { /*Font */
 	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
 	color: white;
 }
 
@@ -148,8 +149,6 @@ footer {
 	.sidebar {
 		padding: var(--m-margin) 0 5px;
 
-		font-size: 14px;
-
 		align-items: stretch;
 	}
 
@@ -251,12 +250,20 @@ footer {
 }
 
 .upgrade-banner .btn {
+	text-transform: uppercase;
+	font-weight: 500;
 	color: white;
 
 	margin-right: var(--m-margin);
-	padding: 1em 4em;
+	padding: 1em 3em;
 	border: 1px solid white;
-	border-radius: 1.5em;
+	border-radius: 3rem;
+
+	transition: transform .5s;
+}
+
+.upgrade-banner .btn:hover {
+	transform: scale(1.1);
 }
 
 /* Main */
@@ -276,7 +283,6 @@ footer {
 
 	padding-top: 15px;
 
-	font-size: 14px;
 	font-weight: 600;
 }
 
@@ -310,13 +316,29 @@ footer {
 .music-player {
 	background-color: var(--music-player-background);
 
-	position: absolute;
+	position: relative;
 	bottom: 0;
+	z-index: 20;
 
 	display: flex;
-
-	z-index: 20;
+	align-items: center;
 }
+.track {
+	display: flex;
+}
+
+.track img {
+	height: 28px;
+	width: 28px;
+	object-fit: contain;
+}
+
+.icons {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Vertical overflow fix */
 
 @media screen and (max-height: 180px) {
 	.main-content {
