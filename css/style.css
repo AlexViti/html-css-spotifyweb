@@ -132,10 +132,14 @@ main {
 footer {
 	width: 100%;
 	height: var(--music-player-height);
-	
-	position: absolute;
-	bottom: 0;
-	z-index: 20;
+}
+
+@media screen and (max-height: 200px) {
+	footer {
+		position: absolute;
+		bottom: 0;
+		z-index: 20;
+	}
 }
 
 /* Lateral header */
