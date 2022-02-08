@@ -107,8 +107,7 @@ ul {
 
 /* Macro-areas size */
 body {
-	height: 100vh;
-	height: -webkit-fill-available;
+	min-width: 415px;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -117,13 +116,13 @@ body {
 
 header {
 	width: var(--side-bar-width);
-	height: calc(100% - var(--music-player-height));
+	height: calc(100vh - var(--music-player-height));
 
 	overflow: hidden;
 }
 
 main {
-	height: calc(100% - var(--music-player-height));
+	height: calc(100vh - var(--music-player-height));
 	flex: 1 0 0;
 
 	overflow-y: auto;
@@ -507,9 +506,9 @@ footer {
 }
 
 .player-center {
-	width: 33%;
-	min-width: fit-content;
-
+	/* width: 33%;
+	min-width: fit-content; */
+	flex: .6 0 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -517,9 +516,10 @@ footer {
 
 .function {
 	margin-bottom: var(--m-margin);
-	width: 190px;
-	
-	font-size: 18px;
+	/* width: 190px; */
+	width: 100%;
+	/* font-size: 18px; */
+	font-size: 16px;
 	
 	display: flex;
 	justify-content: space-between;
@@ -531,7 +531,8 @@ footer {
 }
 
 .function .fa-play-circle {
-	font-size: 30px;
+	/* font-size: 30px; */
+	font-size: 24px;
 }
 
 .progress {
@@ -555,12 +556,15 @@ footer {
 }
 
 .player-right {
+	flex: .3 0 0;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
 }
 
 .volume {
+	min-width: 100px;
 	flex: .85 0 0;
 	display: flex;
 	align-items: center;
