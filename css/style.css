@@ -51,22 +51,22 @@ ul {
 }
 
 .btn {
-	color: var(--gray)
+	opacity: 0.6;
 }
 
 .btn:hover {
 	cursor: pointer;
 
-	color: white;
+	opacity: 1;
 }
 
 /* Bar rules */
 
 .bar {
-	background-color: var(--bar-background);
-	
 	height: 4px;
 	border-radius: 2px;
+	
+	background-color: var(--bar-background);
 }
 
 .bar:hover {
@@ -74,11 +74,11 @@ ul {
 }
 
 .bar-filled {
-	background-color: var(--bar-filled);
-
 	height: 100%;
 	border-radius: 2px;
-
+	
+	background-color: var(--bar-filled);
+	
 	position: relative;
 }
 
@@ -87,13 +87,13 @@ ul {
 }
 
 .bar-circle {
-	display: none;
-
 	height: 6px;
 	width: 6px;
 	border-radius: 50%;
-
+	
 	background-color: white;
+	
+	display: none;
 
 	position: absolute;
 	top: 50%;
@@ -130,19 +130,22 @@ main {
 footer {
 	width: 100%;
 	height: var(--music-player-height);
+}
 
-	
-	position: absolute;
-	bottom: 0;
-	z-index: 20;
+@media screen and (max-height: 200px) {
+	footer {
+		position: absolute;
+		bottom: 0;
+		z-index: 20;
+	}
 }
 
 /* Lateral header */
 
 .sidebar {
-	background-color: black;
-	
 	padding: 5px 0 10px;
+	
+	background-color: black;
 	
 	display: flex;
 	flex-direction: column;
@@ -244,7 +247,7 @@ footer {
 	.sidebar .btn.selected {
 		padding-left: 18px;
 		border-left: var(--selected-border);
-		color: white;
+		opacity: 1;
 	}
 
 	.add-playlist {
@@ -275,7 +278,7 @@ footer {
 		margin-right: var(--s-margin);
 	}
 
-	.btn.user-profile {
+	.user-profile {
 		padding-top: 13px;
 		padding-left: 0;
 		margin: var(--s-margin) var(--l-margin) 0;
@@ -291,17 +294,18 @@ footer {
 }
 
 /* Fixed-banner */
+
 .upgrade-banner {
-	background-color: #00000066;
-
 	height: var(--banner-height);
-
+	
 	position: fixed;
 	left: var(--side-bar-width);
 	right: 0;
 	top: 0;
 	z-index: 10;
-
+	
+	background-color: #00000066;
+	
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
@@ -310,7 +314,8 @@ footer {
 .upgrade-banner .btn {
 	text-transform: uppercase;
 	font-weight: 500;
-	color: white;
+	
+	opacity: 1;
 
 	margin-right: var(--l-margin);
 	padding: 1em 3em;
@@ -329,17 +334,34 @@ footer {
 .main-content {
 	background-color: var(--main-background);
 
-	padding: var(--banner-height) 20px var(--l-margin) 30px;
+	padding: var(--banner-height) 30px var(--l-margin) 20px;
+}
+
+.main-content section {
+	margin: 40px 0;
+}
+
+.item h3 {
+	margin-top: 20px;
+}
+
+.subtitle {
+	margin-top: 12px;
+	color: var(--gray);
 }
 
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
+	/* gap: 10px; */
+	margin: 20px -5px 0; /* If gap doesn't work */
 }
 
 .item {
 	width: calc(50% - 10px);
+	margin: 0 5px 12px; /* If gap doesn't work */
+
+	text-align: center;
 }
 
 @media screen and (min-width: 701px) {
@@ -393,19 +415,19 @@ footer {
 /* Top navbar */
 
 .main-navbar ul {
+	padding-top: 15px;
+	
+	font-weight: 600;
+	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-
-	padding-top: 15px;
-
-	font-weight: 600;
 }
 
 .main-navbar .btn {
-	text-transform: uppercase;
-
 	padding: 5px 12px;
+	
+	text-transform: uppercase;
 
 	display: flex;
 	flex-direction: column;
@@ -430,9 +452,9 @@ footer {
 /* Footer */
 
 .music-player {
-	background-color: var(--music-player-background);
-
 	padding: 0 10px;
+
+	background-color: var(--music-player-background);
 
 	display: flex;
 	justify-content: space-between;
@@ -440,21 +462,18 @@ footer {
 }
 
 .player-left {
-	width: 10%;
-	min-width: 150px;
-
 	display: flex;
 }
 
 .track {
 	margin-right: var(--l-margin);
 	
-	display: flex;
-	align-items: center;
-
 	color: var(--gray);
 	font-size: 12px;
 	font-weight: 600;
+	
+	display: flex;
+	align-items: center;
 }
 
 .track h4 {
@@ -474,6 +493,7 @@ footer {
 
 .icons {
 	font-size: 18px;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -493,10 +513,10 @@ footer {
 }
 
 .function {
-	font-size: 18px;
-
-	width: 190px;
 	margin-bottom: var(--m-margin);
+	width: 190px;
+	
+	font-size: 18px;
 	
 	display: flex;
 	justify-content: space-between;
@@ -510,17 +530,17 @@ footer {
 .progress {
 	width: 100%;
 
-	display: flex;
-	align-items: center;
-
 	font-size: 12px;
 	font-weight: 600;
+	
+	display: flex;
+	align-items: center;
 }
 
 .progress-bar {
-	flex: 1 0 0;
-
 	margin: 0 var(--s-margin);
+	
+	flex: 1 0 0;
 }
 
 .current-progress {
@@ -528,8 +548,6 @@ footer {
 }
 
 .player-right {
-	width: 10%;
-	min-width: 150px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
