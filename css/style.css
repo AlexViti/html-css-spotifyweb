@@ -362,6 +362,12 @@ footer {
 	display: flex;
 }
 
+.round {
+	border-radius: 50%;
+
+	overflow: hidden;
+}
+
 .cover img {
 	width: 100%;
 }
